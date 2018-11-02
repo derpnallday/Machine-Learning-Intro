@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)https://fsix.github.io/mnist/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>MNIST by fsix</title>
+
+    <link rel="stylesheet" href="./MNIST by fsix_files/styles.css">
+    <link rel="stylesheet" href="./MNIST by fsix_files/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>MNIST</h1>
+        <p>Tips and Tricks for Cracking ML's Favorite Image Dataset</p>
+
+        <p class="view"><a href="https://github.com/fsix/mnist">View the Project on GitHub <small>fsix/mnist</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/fsix/mnist/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/fsix/mnist/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/fsix/mnist">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="a-guide-to-mnist" class="anchor" href="https://fsix.github.io/mnist/#a-guide-to-mnist" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A Guide to MNIST</h1>
+
+<p>Authored by Dibya Ghosh and Alvin Wan</p>
+
+<h2>
+<a id="introduction" class="anchor" href="https://fsix.github.io/mnist/#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>This guide is written for coders just beginning with MNIST; MNIST is a dataset of handwritten digits published in the 1990s, MNIST is perhaps one of the most iconic exercises for beginning machine learning - a milestone in using computers to structurally analyse images. This guide will serve as an exploration of the MNIST dataset, looking at several techniques and their effects on training.</p>
+
+<h2>
+<a id="preprocessing-techniques" class="anchor" href="https://fsix.github.io/mnist/#preprocessing-techniques" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Preprocessing Techniques</h2>
+
+<h3>
+<a id="deskewing" class="anchor" href="https://fsix.github.io/mnist/#deskewing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deskewing</h3>
+
+<p>Deskewing images involves offsetting and skewing images so their center of masses coincide with the center of the image and such that the x and y covariance of the pixel intensities is 0. By reversing the proposed affine transformation, we essentially "standardize" the images, making it much easier for the ML algorithm to distinguish between images.</p>
+
+<p><a href="https://fsix.github.io/mnist/Deskewing.html">Check out the Jupyter Notebook here</a></p>
+
+<h2>
+<a id="optimizing-hyperparameters" class="anchor" href="https://fsix.github.io/mnist/#optimizing-hyperparameters" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Optimizing Hyperparameters</h2>
+
+<h3>
+<a id="linegrid-search" class="anchor" href="https://fsix.github.io/mnist/#linegrid-search" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Line/Grid Search</h3>
+
+<h3>
+<a id="bayesian-optimization" class="anchor" href="https://fsix.github.io/mnist/#bayesian-optimization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bayesian Optimization</h3>
+
+<p>We'll comment on this later.</p>
+
+<h2>
+<a id="adverserial-training" class="anchor" href="https://fsix.github.io/mnist/#adverserial-training" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Adverserial Training</h2>
+
+<h3>
+<a id="perturbing" class="anchor" href="https://fsix.github.io/mnist/#perturbing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perturbing</h3>
+
+<p>Perturbation is the technique of generating "jittered" images from our original training dataset. In particular, we found that adding random noise, random rotations, skews, and elastic distortions help generalize our dataset against adversarial images.</p>
+
+<p>This technique is a specialized form of training for "adversarial images", when the testing metric is designed to challenge and perform the worst on overfit and nongeneralized models. </p>
+
+<p><a href="https://fsix.github.io/mnist/Perturbing.html">Check out the Jupyter Notebook here</a></p>
+
+<h2>
+<a id="guiding-approximations" class="anchor" href="https://fsix.github.io/mnist/#guiding-approximations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Guiding Approximations</h2>
+
+<h3>
+<a id="momentum-and-annealing-for-sgd" class="anchor" href="https://fsix.github.io/mnist/#momentum-and-annealing-for-sgd" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Momentum and Annealing for SGD</h3>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/fsix">fsix</a></p>
+        <p><small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="./MNIST by fsix_files/scale.fix.js.download"></script>
+    
+  
+
+</body></html>
